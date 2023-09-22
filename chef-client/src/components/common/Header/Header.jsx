@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import Menubar from "../../shared/Menubar/Menubar";
+import HeroSection from "../../shared/HeroSection/HeroSection";
 
 const Header = () => {
   return (
     <div>
-      <h1>this is header</h1>
+      <Menubar />
+      <HeroSection/>
     </div>
   );
 };

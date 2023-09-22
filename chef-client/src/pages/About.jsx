@@ -1,8 +1,10 @@
+import { Container } from "@mantine/core";
+
 const About = () => {
   return (
-    <div>
+    <Container>
       <h1>this is about</h1>
-    </div>
+    </Container>
   );
 };
 
