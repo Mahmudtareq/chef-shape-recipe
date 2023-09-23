@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
 
+import SingleChef from "../components/SingleChef/SingleChef";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +18,12 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "chef/:id",
+        element: <SingleChef />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chef/${params.id}`),
       },
     ],
   },

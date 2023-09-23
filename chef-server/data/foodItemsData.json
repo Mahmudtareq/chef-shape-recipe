@@ -1,0 +1,503 @@
+
+   [
+    {
+      "id": 1,
+      "food_name": "Biriyani",
+      "publish_date": "2023-09-23",
+      "cook_time": "1 hour",
+      "preparation_time": "30 minutes",
+      "image": "biriyani_image_url",
+      "rating": 4.8,
+      "reviews": 125,
+      "description": "A fragrant and flavorful rice dish made with aromatic spices and tender meat or vegetables.",
+      "ingredients": [
+        "Basmati rice",
+        "Chicken or beef",
+        "Onions",
+        "Tomatoes",
+        "Spices"
+      ],
+      "instructions": "Detailed instructions on how to prepare the dish.",
+      "category_id": 101
+    },
+    {
+      "id": 2,
+      "food_name": "Rasgulla",
+      "publish_date": "2023-09-22",
+      "cook_time": "30 minutes",
+      "preparation_time": "20 minutes",
+      "image": "rasgulla_image_url",
+      "rating": 4.5,
+      "reviews": 75,
+      "description": "A popular Bengali sweet made from chhena dough cooked in sugar syrup.",
+      "ingredients": [
+        "Chhena",
+        "Sugar",
+        "Water",
+        "Cardamom"
+      ],
+      "instructions": "Step-by-step instructions for making delicious Rasgullas.",
+      "category_id": 102
+    },
+    {
+      "id": 3,
+      "food_name": "Hilsa Curry",
+      "publish_date": "2023-09-21",
+      "cook_time": "45 minutes",
+      "preparation_time": "15 minutes",
+      "image": "hilsa_curry_image_url",
+      "rating": 4.7,
+      "reviews": 95,
+      "description": "A spicy and tangy fish curry made with fresh Hilsa fish.",
+      "ingredients": [
+        "Hilsa fish",
+        "Mustard paste",
+        "Turmeric",
+        "Green chilies",
+        "Mustard oil"
+      ],
+      "instructions": "Follow these steps to prepare a mouthwatering Hilsa Curry.",
+      "category_id": 101
+    },
+    {
+      "id": 4,
+      "food_name": "Chingri Malai Curry",
+      "publish_date": "2023-09-20",
+      "cook_time": "40 minutes",
+      "preparation_time": "20 minutes",
+      "image": "chingri_malai_curry_image_url",
+      "rating": 4.9,
+      "reviews": 110,
+      "description": "A creamy and coconut-based prawn curry with a hint of sweetness.",
+      "ingredients": [
+        "Prawns",
+        "Coconut milk",
+        "Spices",
+        "Sugar",
+        "Ghee"
+      ],
+      "instructions": "Learn how to make Chingri Malai Curry with our detailed guide.",
+      "category_id": 101
+    },
+    {
+      "id": 5,
+      "food_name": "Mutton Kacchi Biryani",
+      "publish_date": "2023-09-19",
+      "cook_time": "2 hours",
+      "preparation_time": "45 minutes",
+      "image": "mutton_kacchi_biryani_image_url",
+      "rating": 4.6,
+      "reviews": 90,
+      "description": "A delicious and aromatic mutton biryani cooked with marinated meat and basmati rice.",
+      "ingredients": [
+        "Mutton",
+        "Basmati rice",
+        "Yogurt",
+        "Spices",
+        "Mint leaves"
+      ],
+      "instructions": "Cooking instructions for Mutton Kacchi Biryani.",
+      "category_id": 101
+    },
+    {
+      "id": 6,
+      "food_name": "Chapli Kebab",
+      "publish_date": "2023-09-18",
+      "cook_time": "25 minutes",
+      "preparation_time": "15 minutes",
+      "image": "chapli_kebab_image_url",
+      "rating": 4.4,
+      "reviews": 80,
+      "description": "A spicy and juicy beef kebab served with naan or roti.",
+      "ingredients": [
+        "Ground beef",
+        "Spices",
+        "Tomatoes",
+        "Onions",
+        "Coriander"
+      ],
+      "instructions": "Detailed instructions for making Chapli Kebab.",
+      "category_id": 103
+    },
+    {
+      "id": 7,
+      "food_name": "Bhapa Ilish",
+      "publish_date": "2023-09-17",
+      "cook_time": "35 minutes",
+      "preparation_time": "10 minutes",
+      "image": "bhapa_ilish_image_url",
+      "rating": 4.7,
+      "reviews": 105,
+      "description": "A steamed Hilsa fish dish marinated with mustard and spices.",
+      "ingredients": [
+        "Hilsa fish",
+        "Mustard paste",
+        "Turmeric",
+        "Green chilies",
+        "Mustard oil"
+      ],
+      "instructions": "Learn how to make Bhapa Ilish with our easy recipe.",
+      "category_id": 101
+    },
+    {
+      "id": 8,
+      "food_name": "Mishti Doi",
+      "publish_date": "2023-09-16",
+      "cook_time": "12 hours (fermentation)",
+      "preparation_time": "15 minutes",
+      "image": "mishti_doi_image_url",
+      "rating": 4.8,
+      "reviews": 120,
+      "description": "A sweet and creamy Bengali dessert made with yogurt and sugar.",
+      "ingredients": [
+        "Yogurt",
+        "Sugar",
+        "Cardamom",
+        "Milk"
+      ],
+      "instructions": "Detailed instructions for preparing Mishti Doi.",
+      "category_id": 102
+    },
+    {
+      "id": 9,
+      "food_name": "Shorshe Ilish",
+      "publish_date": "2023-09-15",
+      "cook_time": "30 minutes",
+      "preparation_time": "15 minutes",
+      "image": "shorshe_ilish_image_url",
+      "rating": 4.6,
+      "reviews": 95,
+      "description": "A flavorful Hilsa fish curry with mustard paste and green chilies.",
+      "ingredients": [
+        "Hilsa fish",
+        "Mustard paste",
+        "Turmeric",
+        "Green chilies",
+        "Mustard oil"
+      ],
+      "instructions": "Cooking instructions for Shorshe Ilish.",
+      "category_id": 101
+    },
+    {
+      "id": 10,
+      "food_name": "Aloo Paratha",
+      "publish_date": "2023-09-14",
+      "cook_time": "20 minutes",
+      "preparation_time": "30 minutes",
+      "image": "aloo_paratha_image_url",
+      "rating": 4.5,
+      "reviews": 85,
+      "description": "A popular North Indian stuffed flatbread with spiced potato filling.",
+      "ingredients": [
+        "Whole wheat flour",
+        "Potatoes",
+        "Spices",
+        "Ghee",
+        "Yogurt"
+      ],
+      "instructions": "Step-by-step instructions for making Aloo Paratha.",
+      "category_id": 103
+    },
+    {
+      "id": 11,
+      "food_name": "Fuchka",
+      "publish_date": "2023-09-13",
+      "cook_time": "N/A (street food)",
+      "preparation_time": "N/A (street food)",
+      "image": "fuchka_image_url",
+      "rating": 4.9,
+      "reviews": 130,
+      "description": "Crispy and hollow semolina balls filled with spicy tamarind water and potatoes.",
+      "ingredients": [
+        "Semolina",
+        "Potatoes",
+        "Tamarind",
+        "Chilies",
+        "Spices"
+      ],
+      "instructions": "Enjoy this popular street food snack straight from the vendor.",
+      "category_id": 102
+    },
+    {
+      "id": 12,
+      "food_name": "Shingara",
+      "publish_date": "2023-09-12",
+      "cook_time": "25 minutes",
+      "preparation_time": "30 minutes",
+      "image": "shingara_image_url",
+      "rating": 4.4,
+      "reviews": 75,
+      "description": "Crispy and savory pastry filled with spiced vegetables or meat.",
+      "ingredients": [
+        "Flour",
+        "Potatoes",
+        "Peas",
+        "Spices",
+        "Oil"
+      ],
+      "instructions": "Learn how to make delicious Shingara snacks.",
+      "category_id": 102
+    },
+    {
+      "id": 13,
+      "food_name": "Pitha",
+      "publish_date": "2023-09-11",
+      "cook_time": "30 minutes",
+      "preparation_time": "20 minutes",
+      "image": "pitha_image_url",
+      "rating": 4.7,
+      "reviews": 110,
+      "description": "Traditional Bengali rice cakes made during festivals.",
+      "ingredients": [
+        "Rice flour",
+        "Coconut",
+        "Molasses",
+        "Sesame seeds",
+        "Cardamom"
+      ],
+      "instructions": "Prepare these delicious Pitha for special occasions.",
+      "category_id": 105
+    },
+    {
+      "id": 14,
+      "food_name": "Bhorta",
+      "publish_date": "2023-09-10",
+      "cook_time": "20 minutes",
+      "preparation_time": "15 minutes",
+      "image": "bhorta_image_url",
+      "rating": 4.5,
+      "reviews": 95,
+      "description": "Mashed vegetables or fish mixed with spices for a flavorful side dish.",
+      "ingredients": [
+        "Eggplant",
+        "Mustard oil",
+        "Spices",
+        "Chilies",
+        "Onions"
+      ],
+      "instructions": "Learn how to make various types of Bhorta.",
+      "category_id": 103
+    },
+    {
+      "id": 15,
+      "food_name": "Tehari",
+      "publish_date": "2023-09-09",
+      "cook_time": "45 minutes",
+      "preparation_time": "25 minutes",
+      "image": "tehari_image_url",
+      "rating": 4.6,
+      "reviews": 100,
+      "description": "A flavorful rice dish with tender meat and aromatic spices.",
+      "ingredients": [
+        "Basmati rice",
+        "Beef or mutton",
+        "Spices",
+        "Onions",
+        "Tomatoes"
+      ],
+      "instructions": "Cooking instructions for Tehari.",
+      "category_id": 106
+    },
+     {
+      "id": 16,
+      "food_name": "Khichuri",
+      "publish_date": "2023-09-08",
+      "cook_time": "40 minutes",
+      "preparation_time": "20 minutes",
+      "image": "khichuri_image_url",
+      "rating": 4.5,
+      "reviews": 90,
+      "description": "A comforting one-pot dish made with rice, lentils, and spices.",
+      "ingredients": [
+        "Rice",
+        "Lentils",
+        "Spices",
+        "Ghee",
+        "Vegetables"
+      ],
+      "instructions": "Learn how to make delicious Khichuri for a hearty meal.",
+      "category_id": 106
+    },
+    {
+      "id": 17,
+      "food_name": "Panta Ilish",
+      "publish_date": "2023-09-07",
+      "cook_time": "15 minutes",
+      "preparation_time": "10 minutes",
+      "image": "panta_ilish_image_url",
+      "rating": 4.7,
+      "reviews": 95,
+      "description": "Fermented rice with Hilsa fish served with traditional condiments.",
+      "ingredients": [
+        "Hilsa fish",
+        "Fermented rice",
+        "Chilies",
+        "Onions",
+        "Mustard oil"
+      ],
+      "instructions": "Discover the unique preparation of Panta Ilish.",
+      "category_id": 106
+    },
+    {
+      "id": 18,
+      "food_name": "Beguni",
+      "publish_date": "2023-09-06",
+      "cook_time": "20 minutes",
+      "preparation_time": "15 minutes",
+      "image": "beguni_image_url",
+      "rating": 4.4,
+      "reviews": 75,
+      "description": "Crispy eggplant fritters, a popular snack in Bangladesh.",
+      "ingredients": [
+        "Eggplant slices",
+        "Chickpea flour",
+        "Spices",
+        "Oil",
+        "Chutney"
+      ],
+      "instructions": "Learn how to make perfect Beguni at home.",
+      "category_id": 105
+    },
+    {
+      "id": 19,
+      "food_name": "Aloo Peyajer Chop",
+      "publish_date": "2023-09-05",
+      "cook_time": "25 minutes",
+      "preparation_time": "20 minutes",
+      "image": "aloo_peyajer_chop_image_url",
+      "rating": 4.8,
+      "reviews": 110,
+      "description": "A delicious snack made with potato and onion fritters.",
+      "ingredients": [
+        "Potatoes",
+        "Onions",
+        "Spices",
+        "Chickpea flour",
+        "Oil"
+      ],
+      "instructions": "Follow our recipe to make Aloo Peyajer Chop at home.",
+      "category_id": 105
+    },
+    {
+      "id": 20,
+      "food_name": "Chitol Maacher Muitha",
+      "publish_date": "2023-09-04",
+      "cook_time": "30 minutes",
+      "preparation_time": "15 minutes",
+      "image": "chitol_maacher_muitha_image_url",
+      "rating": 4.6,
+      "reviews": 85,
+      "description": "Steamed fish dumplings served in a flavorful curry.",
+      "ingredients": [
+        "Chitol fish",
+        "Spices",
+        "Mustard oil",
+        "Coconut milk",
+        "Green chilies"
+      ],
+      "instructions": "Learn how to make Chitol Maacher Muitha for a unique taste.",
+      "category_id": 104
+    },
+    {
+      "id": 21,
+      "food_name": "Kala Bhuna",
+      "publish_date": "2023-09-03",
+      "cook_time": "40 minutes",
+      "preparation_time": "20 minutes",
+      "image": "kala_bhuna_image_url",
+      "rating": 4.9,
+      "reviews": 130,
+      "description": "A spicy and rich mutton curry with a dark, flavorful gravy.",
+      "ingredients": [
+        "Mutton",
+        "Spices",
+        "Mustard oil",
+        "Tomatoes",
+        "Coriander leaves"
+      ],
+      "instructions": "Cook Kala Bhuna with our recipe for a delightful meal.",
+      "category_id": 104
+    },
+    {
+      "id": 22,
+      "food_name": "Malpoa",
+      "publish_date": "2023-09-02",
+      "cook_time": "20 minutes",
+      "preparation_time": "15 minutes",
+      "image": "malpoa_image_url",
+      "rating": 4.4,
+      "reviews": 70,
+      "description": "Sweet fried pancakes soaked in sugar syrup.",
+      "ingredients": [
+        "Flour",
+        "Sugar",
+        "Cardamom",
+        "Fried in ghee",
+        "Syrup"
+      ],
+      "instructions": "Prepare Malpoa for a delightful dessert.",
+      "category_id": 102
+    },
+    {
+      "id": 23,
+      "food_name": "Dimer Korma",
+      "publish_date": "2023-09-01",
+      "cook_time": "35 minutes",
+      "preparation_time": "15 minutes",
+      "image": "dimer_korma_image_url",
+      "rating": 4.7,
+      "reviews": 100,
+      "description": "A flavorful egg curry made with aromatic spices and yogurt.",
+      "ingredients": [
+        "Eggs",
+        "Yogurt",
+        "Spices",
+        "Onions",
+        "Tomatoes"
+      ],
+      "instructions": "Cook Dimer Korma for a delicious egg dish.",
+      "category_id": 104
+    },
+    {
+      "id": 24,
+      "food_name": "Mango Chutney",
+      "publish_date": "2023-08-31",
+      "cook_time": "25 minutes",
+      "preparation_time": "15 minutes",
+      "image": "mango_chutney_image_url",
+      "rating": 4.5,
+      "reviews": 90,
+      "description": "A sweet and tangy chutney made with ripe mangoes and spices.",
+      "ingredients": [
+        "Ripe mangoes",
+        "Sugar",
+        "Vinegar",
+        "Spices",
+        "Ginger"
+      ],
+      "instructions": "Prepare Mango Chutney for a perfect condiment.",
+      "category_id": 103
+    },
+    {
+      "id": 25,
+      "food_name": "Shahi Tukra",
+      "publish_date": "2023-08-30",
+      "cook_time": "30 minutes",
+      "preparation_time": "15 minutes",
+      "image": "shahi_tukra_image_url",
+      "rating": 4.6,
+      "reviews": 85,
+      "description": "A royal dessert made with fried bread soaked in sweetened milk and garnished with nuts.",
+      "ingredients": [
+        "Bread slices",
+        "Milk",
+        "Sugar",
+        "Saffron",
+        "Nuts"
+      ],
+      "instructions": "Prepare Shahi Tukra for a delightful dessert.",
+      "category_id": 102
+    }
+    
+  ]
+
