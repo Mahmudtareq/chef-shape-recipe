@@ -49,11 +49,11 @@ const ChefCard = ({ chef }) => {
         </Badge>
       </Group>
 
-      <Button variant="light" color="blue" fullWidth mt="xl" radius="md">
-        <Link to={`/chef/${id}`} className="no-underline">
+      <Link to={`/chef/${id}`} className="no-underline">
+        <Button variant="light" color="blue" fullWidth mt="xl" radius="md">
           Show details
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </Card>
   );
 };

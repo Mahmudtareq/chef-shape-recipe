@@ -14,6 +14,11 @@ app.get("/chef", (req, res) => {
 app.get("/food", (req, res) => {
   res.send(foodItemsData);
 });
+app.get("/food/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const singleItem = foodItemsData.find((item) => parseInt(item.id) === id);
+  res.send(singleItem);
+});
 
 app.get("/chef/:id", (req, res) => {
   const id = parseInt(req.params.id);
@@ -21,7 +26,6 @@ app.get("/chef/:id", (req, res) => {
     (item) => parseInt(item.category_id) === id
   );
   res.send(categoryFood);
-  console.log(categoryFood);
 });
 
 app.listen(port, () => {

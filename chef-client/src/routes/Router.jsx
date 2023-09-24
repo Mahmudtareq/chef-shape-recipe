@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 
 import SingleChef from "../components/SingleChef/SingleChef";
+import FoodDetails from "../components/FoodDetails/FoodDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
         element: <SingleChef />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chef/${params.id}`),
+      },
+      {
+        path: "food/:id",
+        element: <FoodDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/food/${params.id}`),
       },
     ],
   },
