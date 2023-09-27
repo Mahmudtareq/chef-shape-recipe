@@ -1,0 +1,30 @@
+[
+  {
+    "id": 101,
+    "category_name": "Vegetables",
+    "icon": "vegetables.png",
+    "related_info": {
+     
+    }
+  },
+  {
+    "id": 102,
+    "category_name": "Meats",
+    "icon": "meats.png",
+    "related_info": {}
+  },
+  {
+    "id": 103,
+    "category_name": "Cheese",
+    "icon": "cheese.png",
+    "related_info": {
+    }
+  },
+  {
+    "id": 104,
+    "category_name": "Rich Food",
+    "icon": "rich-food.png",
+    "related_info": {
+    }
+  }
+]

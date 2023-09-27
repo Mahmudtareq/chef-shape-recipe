@@ -5,6 +5,8 @@ import About from "../pages/About";
 
 import SingleChef from "../components/SingleChef/SingleChef";
 import FoodDetails from "../components/FoodDetails/FoodDetails";
+import Login from "../components/Login/Login/Login";
+import Register from "../components/Login/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
       {
         path: "chef/:id",
