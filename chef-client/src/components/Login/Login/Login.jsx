@@ -1,25 +1,57 @@
+/* eslint-disable no-unused-vars */
 import {
   Box,
   Button,
   Container,
   Divider,
   Group,
+  Notification,
   PasswordInput,
   TextInput,
   Title,
 } from "@mantine/core";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { loginUser, googleSignIn } = useContext(AuthContext);
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const gotoLocation = location.state?.from?.pathname || "/";
+  console.log(gotoLocation);
   const handleLogin = (e) => {
     e.preventDefault();
     const from = e.target;
     const email = from.email.value;
     const password = from.password.value;
-    console.log(email, password);
+    loginUser(email, password)
+      .then((result) => {
+        const signedIn = result.user;
+        toast("User Login Successfully");
+        navigate(gotoLocation, { replace: true });
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
     from.reset();
+  };
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const googleUser = result.user;
+        toast("Login Success");
+        navigate(gotoLocation, { replace: true });
+        setError("");
+      })
+      .catch((error) => {
+        setError(error);
+      });
   };
   return (
     <Container className="my-10">
@@ -50,10 +82,26 @@ const Login = () => {
           </Button>
           <p className="text-center text-blue-600">
             If you are New please?{" "}
-            <Link to="/register" className="hover:underline no-underline text-red-600">
+            <Link
+              to="/register"
+              className="hover:underline no-underline text-red-600"
+            >
               Register
             </Link>
           </p>
+          <div>
+            {error && (
+              <Notification
+                title="Firebase Error"
+                color="red"
+                classNames={{
+                  inner: { color: "red" },
+                }}
+              >
+                {error}
+              </Notification>
+            )}
+          </div>
         </form>
         <Divider my="md" label="Or" labelPosition="center" />
         <Group grow>
@@ -61,6 +109,7 @@ const Login = () => {
             leftSection={<FcGoogle />}
             variant="default"
             className="w-[50%]"
+            onClick={handleGoogleSignIn}
           >
             Google Login
           </Button>

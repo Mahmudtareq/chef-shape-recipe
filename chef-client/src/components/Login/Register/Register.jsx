@@ -10,13 +10,15 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
 import { AuthContext } from "../../../providers/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
@@ -25,18 +27,30 @@ const Register = () => {
     const email = from.email.value;
     const photo = from.photo.value;
     const password = from.password.value;
+    const passwordPattern =
+      /^(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{8,}$/;
+    if (!passwordPattern.test(password)) {
+      setError(
+        "It must be at least 8 characters long and contain at least one digit and one special character."
+      );
+      return; // Prevent further execution if password format is invalid
+    }
     createUser(email, password)
       .then((result) => {
         const newUser = result.user;
-        toast(<Notification>User create successfully</Notification>);
+        toast("User create successfully");
         navigate("/login");
 
         console.log(newUser);
+        setError("");
       })
       .catch((error) => {
-        console.log(error.message);
+        setError(error.message);
       });
     from.reset();
+  };
+  const handleClose = () => {
+    console.log("click");
   };
   return (
     <Container className="my-10">
@@ -77,7 +91,17 @@ const Register = () => {
             required
             placeholder="Enter your Password"
             name="password"
-            // error="Invalid Password"
+            error={
+              error && (
+                <Notification
+                  left={<AiOutlineClose onClick={handleClose} />}
+                  color="red"
+                  title="Validation Error"
+                >
+                  {error}
+                </Notification>
+              )
+            }
           />
           <Group>
             <Checkbox

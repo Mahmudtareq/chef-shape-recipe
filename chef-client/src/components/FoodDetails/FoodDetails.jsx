@@ -9,9 +9,8 @@ const FoodDetails = () => {
   const { user } = useContext(AuthContext);
   return (
     <div>
-      <h1>
-        food details :{id} {user}
-      </h1>
+      <h1>food details :{id}</h1>
+      <h2>{user && <p>{user.email}</p>}</h2>
     </div>
   );
 };

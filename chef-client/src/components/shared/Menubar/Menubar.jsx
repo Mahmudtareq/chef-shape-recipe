@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiOutlineBars } from "react-icons/ai";
 import logoImage from "../../../assets/images/logo.png";
 
 import { HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { Button } from "@mantine/core";
+import { AuthContext } from "../../../providers/AuthProvider/AuthProvider";
+import UserMenu from "../../UserMenu/UserMenu";
+
 
 const navigation = [
   { name: "Home", link: "/" },
@@ -20,6 +23,7 @@ const determineDeviceType = () => {
 const Menubar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [deviceType, setDeviceType] = useState(determineDeviceType);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,18 +77,22 @@ const Menubar = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">{items}</div>
         <div className="flex lg:flex-1 lg:justify-end justify-center">
-          <Link
-            to="/login"
-            className="text-sm font-semibold no-underline leading-6 text-gray-900"
-          >
-            <Button>
-              {" "}
-              Log in{" "}
-              <span aria-hidden="true" className="ms-1">
-                &rarr;
-              </span>
-            </Button>
-          </Link>
+          {user ? (
+            <UserMenu />
+          ) : (
+            <Link
+              to="/login"
+              className="text-sm font-semibold no-underline leading-6 text-gray-900"
+            >
+              <Button>
+                {" "}
+                Log in{" "}
+                <span aria-hidden="true" className="ms-1">
+                  &rarr;
+                </span>
+              </Button>
+            </Link>
+          )}
         </div>
       </nav>
       <div className={`lg:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
