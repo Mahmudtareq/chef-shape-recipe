@@ -17,9 +17,11 @@ import { AuthContext } from "../../../providers/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, profileUpdate } = useContext(AuthContext);
   const [error, setError] = useState(false);
+  const [checked, setChecked] = useState(false);
   const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
     const from = e.target;
@@ -38,9 +40,9 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const newUser = result.user;
+        updateUserProfile(newUser, name, photo);
         toast("User create successfully");
         navigate("/login");
-
         console.log(newUser);
         setError("");
       })
@@ -51,6 +53,18 @@ const Register = () => {
   };
   const handleClose = () => {
     console.log("click");
+  };
+  const updateUserProfile = (user, name, photo) => {
+    profileUpdate(user, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then((result) => {
+        console.log("profile update");
+      })
+      .catch((error) => {
+        setError(error);
+      });
   };
   return (
     <Container className="my-10">
@@ -105,7 +119,8 @@ const Register = () => {
           />
           <Group>
             <Checkbox
-              defaultChecked
+              checked={checked}
+              onChange={(event) => setChecked(event.currentTarget.checked)}
               label="I agree Terms & Conditions"
               size="sm"
             />
@@ -119,7 +134,7 @@ const Register = () => {
               </Link>
             </p>
           </Group>
-          <Button type="submit" fullWidth size="md">
+          <Button type="submit" fullWidth size="md" disabled={!checked}>
             Register
           </Button>
         </form>

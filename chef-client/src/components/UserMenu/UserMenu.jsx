@@ -1,7 +1,10 @@
-import { Avatar, Menu } from "@mantine/core";
+import { Avatar, Menu, Tooltip } from "@mantine/core";
 import Logout from "../Login/Logout/Logout";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 
 const UserMenu = () => {
+  const { user } = useContext(AuthContext);
   return (
     <Menu
       shadow="md"
@@ -9,10 +12,26 @@ const UserMenu = () => {
       transitionProps={{ transition: "rotate-right", duration: 150 }}
     >
       <Menu.Target>
-        <Avatar
-          src="https://i.ibb.co/nMqWRDR/member-img-06.png"
-          alt="it's me"
-        />
+        <Tooltip
+          label={user?.displayName}
+          color="indigo"
+          arrowOffset={19}
+          arrowSize={6}
+          withArrow
+          position="top-start"
+        >
+          <Avatar
+            // src={
+            //   user.photoURL ? (
+            //     <>{user.photoURL}</>
+            //   ) : (
+            //     "https://i.ibb.co/nMqWRDR/member-img-06.png"
+            //   )
+            // }
+            src={user?.photoURL}
+            alt="it's me"
+          />
+        </Tooltip>
       </Menu.Target>
 
       <Menu.Dropdown>
