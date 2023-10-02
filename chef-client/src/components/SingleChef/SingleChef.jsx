@@ -1,6 +1,6 @@
 import { Container } from "@mantine/core";
 import { useLoaderData, useParams } from "react-router-dom";
-import FoodCard from "../shared/FoodCard/FoodCard";
+// import FoodCard from "../shared/FoodCard/FoodCard";
 import { useEffect, useState } from "react";
 import SingleChefHeader from "../shared/SingleChefHeader/SingleChefHeader";
 import RecipeLists from "../RecipeLists/RecipeLists";
@@ -38,15 +38,16 @@ const SingleChef = () => {
       <div className="my-5">
         <SingleChefHeader chef={chef} />
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+      {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
         {data.map((item) => (
           <FoodCard key={item.id} item={item} />
         ))}
+      </div> */}
+      <div className="grid md:grid-cols-2  grid-cols-1 gap-6">
+        {data.map((item) => (
+          <RecipeLists key={item.id} item={item} />
+        ))}
       </div>
-      <div className="">
-        <RecipeLists/>
-      </div>
-      
     </Container>
   );
 };
