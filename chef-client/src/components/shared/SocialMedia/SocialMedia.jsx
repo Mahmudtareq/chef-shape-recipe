@@ -8,7 +8,7 @@ import {
 
 const SocialMedia = () => {
   return (
-    <div className="my-5">
+    <div className="">
       <Group gap="xs" mt="md">
         <Anchor href="https://www.google.co.in/" target="_blank">
           <ActionIcon

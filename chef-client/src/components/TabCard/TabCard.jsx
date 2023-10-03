@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Button,
   Grid,
@@ -8,17 +9,17 @@ import {
   ThemeIcon,
   Title,
 } from "@mantine/core";
-import tabImage1 from "../../assets/images/tab-img1.png";
+
 import { BiCheck } from "react-icons/bi";
 
-const TabCard = () => {
+const TabCard = ({ imageSrc, title }) => {
   return (
     <div className="bg-[#293e6b] px-1 py-6 rounded-md">
       <Grid className="p-6">
         <Grid.Col span={{ base: 12, xs: 7 }}>
           <div className="text-white">
             <Title order={2} mb={4}>
-              Garlic Butter Fish
+              {title}
             </Title>
             <Text mb="lg" mt="lg" className="flex items-center gap-2 flex-wrap">
               <Rating defaultValue={5} />
@@ -65,7 +66,7 @@ const TabCard = () => {
           </div>
         </Grid.Col>
         <Grid.Col span={{ base: 12, xs: 5 }} className="rounded-md py-2">
-          <Image src={tabImage1} radius="xl" fit="contain" />
+          <Image src={imageSrc} radius="xl" fit="contain" />
         </Grid.Col>
       </Grid>
     </div>

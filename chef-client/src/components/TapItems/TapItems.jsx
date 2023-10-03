@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { Tabs, Text, Title } from "@mantine/core";
+import { Box, Tabs, Text, Title } from "@mantine/core";
 import React, { useState } from "react";
 import TabCard from "../TabCard/TabCard";
-import TabCardMeat from "../TabCardMeat/TabCardMeat";
-import TabCardDessert from "../TabcardDessert/TabcardDessert";
-import TabCardVegetable from "../TabCardVegetable/TabCardVegetable";
-import TabCardPastas from "../TabCardPastas/TabCardPastas";
+import tabImage1 from "../../assets/images/tab-img1.png";
+import tabImage2 from "../../assets/images/tab-img2.png";
+import tabImage3 from "../../assets/images/tab-img3.png";
+import tabImage4 from "../../assets/images/tab-img4.png";
+import tabImage5 from "../../assets/images/tab-img5.png";
 
 const TapItems = () => {
   const [activeTab, setActiveTab] = useState("fish");
@@ -17,7 +18,7 @@ const TapItems = () => {
   };
   console.log(activeTab);
   return (
-    <div className="my-14">
+    <Box className="my-14">
       <Text
         size="xl"
         ta="center"
@@ -120,25 +121,31 @@ const TapItems = () => {
           </Tabs.List>
 
           <Tabs.Panel value="fish">
-            <TabCard />
+            <TabCard imageSrc={tabImage1} title="Garlic Butter Fish" />
           </Tabs.Panel>
 
           <Tabs.Panel value="meat">
-            <TabCardMeat />
+            <TabCard
+              imageSrc={tabImage2}
+              title=" Minute Egg on Creamy Polenta with Crispy"
+            />
           </Tabs.Panel>
 
           <Tabs.Panel value="dessert">
-            <TabCardDessert />
+            <TabCard imageSrc={tabImage3} title="Taste Lime Slime Garnished" />
           </Tabs.Panel>
           <Tabs.Panel value="vegetable">
-            <TabCardVegetable />
+            <TabCard imageSrc={tabImage4} title=" Crab Appetizer Dish" />
           </Tabs.Panel>
           <Tabs.Panel value="pastas">
-            <TabCardPastas />
+            <TabCard
+              imageSrc={tabImage5}
+              title=" Brooke's Best Bombshell Brownies"
+            />
           </Tabs.Panel>
         </Tabs>
       </div>
-    </div>
+    </Box>
   );
 };
 
